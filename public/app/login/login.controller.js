@@ -38,7 +38,7 @@ class LoginCtrl {
     },  (response) => {
       this.loginInProgress = false;
       console.log('error on login', response);
-      this.error = response.statusText;
+      this.error = response.data.error || response.statusText;
     });
   }
 

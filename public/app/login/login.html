@@ -6,12 +6,14 @@
     <ng-form name="loginForm">
 
       <strct-input strct-form="loginForm"
-                  strct-name="login"
-                  strct-label-name="Login"
-                  strct-place-holder="Login of the user"
-                  ng-model="loginCtrl.username"
-                  required
-                  ng-maxlength="128">
+                  strct-name="email"
+                  strct-label-name="Email"
+                  strct-place-holder="Email of the user"
+                  ng-model="loginCtrl.email"
+                  required>
+        <div ng-messages="loginForm.email.$error">
+          <div ng-message="required">This field is required.</div>
+        </div>
       </strct-input>
 
       <strct-input strct-form="loginForm"
@@ -22,6 +24,9 @@
                   type="password"
                   required
                   ng-maxlength="128">
+        <div ng-messages="loginForm.password.$error">
+          <div ng-message="required">This field is required.</div>
+        </div>
       </strct-input>
 
       <strct-button-primary ng-click="loginCtrl.submit()" strct-button-title="Login"></strct-button-primary>
