@@ -1,0 +1,41 @@
+<div layout="row" flex layout-align="center center">
+  <strct-panel flex="50">
+    <div class="panel-logo">
+      <img src="assets/images/logo.png"/>
+    </div>
+    <ng-form name="loginForm">
+
+      <strct-input strct-form="loginForm"
+                  strct-name="login"
+                  strct-label-name="Login"
+                  strct-place-holder="Login of the user"
+                  ng-model="loginCtrl.username"
+                  required
+                  ng-maxlength="128">
+        <div ng-message="required">A login is required.</div>
+      </strct-input>
+
+      <strct-input strct-form="loginForm"
+                  strct-name="password"
+                  strct-label-name="Password"
+                  strct-place-holder="Password of the user"
+                  ng-model="loginCtrl.password"
+                  type="password"
+                  required
+                  ng-maxlength="128">
+        <div ng-message="required">A password is required.</div>
+      </strct-input>
+
+      <strct-button-primary ng-click="loginCtrl.submit()" strct-button-title="Login"></strct-button-primary>
+      <div layout="column" layout-align="center center">
+        <md-progress-circular ng-show="loginCtrl.loginInProgress" class="md-hue-2"  md-mode="indeterminate" md-theme="default"></md-progress-circular>
+        <div class="login-error-message" ng-show="loginCtrl.error">
+          {{loginCtrl.error}}
+        </div>
+      </div>
+
+    </ng-form>
+    <hr>
+    <strct-link class="new-account-link" strct-link-text="Create A New Account" ng-ref="http://www.google.com" strct-new-window></strct-link>
+  </strct-panel>
+</div>

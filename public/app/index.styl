@@ -1,0 +1,107 @@
+stract-separator()
+  position absolute
+  top 0
+  height 24px
+  margin-top 12px
+  border-left solid 1px blue
+  content ""
+
+stract-roundimage()
+  border-radius 50%
+
+stract-developers-face()
+  stract-roundimage()
+  box-shadow-simple()
+  height 37px
+  width 37px
+
+@import '../components/widget'
+
+.browsehappy
+  margin 0.2em 0
+  background #ccc
+  color #000
+  padding 0.2em 0
+
+.thumbnail
+  height 200px
+
+.dark-menu-bg
+  background-color $menu-bg-color
+
+md-sidenav.dark-menu-bg
+  overflow auto
+
+  img.pull-right
+    width 50px
+
+html
+
+body
+  font-size 14px
+  font-family Lato
+  background-color: rgba(52, 86, 154, 0.44);
+  background-repeat: no-repeat;
+  background-image: url(http://www.clker.com/cliparts/T/0/j/Q/f/N/world-map-grey.svg);
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+  -webkit-background-size: cover;
+  -ms-background-size: cover;
+  -o-background-size: cover;
+  -moz-background-size: cover;  
+
+.h1 .small, .h1 small, .h2 .small, .h2 small, .h3 .small, .h3 small, h1 .small, h1 small, h2 .small, h2 small, h3 .small, h3 small, h4 .small, h4 small, h5 .small, .h5 small, h6 small, h6 .small
+  font-size 65%
+  color #777
+
+label
+  font-weight normal !important
+
+md-divider
+  border-top-color #454F5F !important
+
+md-option
+  padding 5px
+  height auto
+
+md-option:hover
+  background-color $hover-on-list-color
+
+.sidebar-entry
+  margin-left auto
+
+.main-page
+  max-width 1296px
+  min-width 320px
+  margin-right auto
+
+
+.main-page-loader
+  width 450px
+  height 450px
+  position absolute
+  top 0
+  bottom 0
+  left 0
+  right 0
+  margin auto
+  color white
+
+.main-page-loader img
+  width 450px
+  height 450px
+
+.not-visible
+  visibility hidden
+// injector
+// endinjector
+
+
+
+.stract-logo
+  width 180px
+  margin-top 10px
+
+.stract-hover:hover
+  stract-brightness(80%)
