@@ -5,7 +5,7 @@ var gulp = require('gulp');
 gulp.paths = {
   src: 'public',
   dist: 'dist',
-  tmp: '.tmp',
+  tmp: 'tmp',
   e2e: 'e2e',
   doc: 'docs'
 };
