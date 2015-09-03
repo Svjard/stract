@@ -128,7 +128,8 @@ class CheckLogin {
   checkRedirect() {
     let user = this.stractUser.getUser();
     // User has no email it needs to be logged in
-    if (!user.email) {
+    console.log('user', user);
+    if (!user.Email) {
       console.log('change to login');
       return {route:'/login'};
     }

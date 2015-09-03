@@ -82,7 +82,6 @@ class StractUser {
     return this.userPromise;
   }
 
-
   fetchUserId(userId) {
     let promise = this.remoteUserAPI.findByID({userId: userId}).$promise;
     let parsedResultPromise = promise.then((user) => {

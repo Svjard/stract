@@ -34,7 +34,7 @@ class LoginCtrl {
 
       // update user
       let promise = this.stractAPI.getUser().refetchUser();
-      promise.then(() => this.refresh() , () => this.refresh());
+      promise.then(() => this.refresh(), () => this.refresh());
     },  (response) => {
       this.loginInProgress = false;
       console.log('error on login', response);
