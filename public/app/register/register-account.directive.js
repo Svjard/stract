@@ -16,10 +16,9 @@ class RegisterAccount {
 
     // scope values
     this.scope = {
-      this.email: '=strctEmail',
-      this.password: '=strctPassword'
+      email: '=strctEmail',
+      password: '=strctPassword'
     };
-
   }
 
   /**

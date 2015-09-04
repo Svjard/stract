@@ -64,7 +64,7 @@ initModule.config(['$routeProvider', function ($routeProvider) {
 }]);
 
 
-//import Register from '../components/utils/register';
+import Register from '../components/utils/register';
 
 // import components
 import ComponentsConfig from '../components/components-config';
@@ -72,19 +72,14 @@ import ComponentsConfig from '../components/components-config';
 import LoginCtrl from './login/login.controller';
 import RegisterCtrl from './register/register.controller';
 
-//var instanceRegister = Register.getInstance();
-/*
-// import navbar
-import NavbarConfig from './navbar/navbar-config';
-new NavbarConfig(instanceRegister);
+var instanceRegister = Register.getInstance();
 
-// import onboarding
-import OnBoardConfig from './onboard/onboard-config';
-new OnBoardConfig(instanceRegister);
-*/
+// import register
+import RegisterConfig from './register/register-config';
+new RegisterConfig(instanceRegister);
 
 // and setup controllers
-initModule.controller('LoginCtrl', LoginCtrl).controller('RegisterCtrl', RegisterCtrl);
+initModule.controller('LoginCtrl', LoginCtrl);
 
 // config routes
 initModule.config(['$routeProvider', function ($routeProvider) {
@@ -93,11 +88,6 @@ initModule.config(['$routeProvider', function ($routeProvider) {
       templateUrl: 'app/login/login.html',
       controller: 'LoginCtrl',
       controllerAs: 'loginCtrl'
-    })
-    .accessWhen('/register', {
-      templateUrl: 'app/register/register.html',
-      controller: 'RegisterCtrl',
-      controllerAs: 'registerCtrl'
     })
     .accessOtherWise({
       redirectTo: '/'

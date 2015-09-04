@@ -4,5 +4,12 @@
       <img src="assets/images/logo.png"/>
     </div>
     <register-account></register-account>
+    <strct-button-primary ng-click="registerCtrl.submit()" strct-button-title="Register"></strct-button-primary>
+    <div layout="column" layout-align="center center">
+      <md-progress-circular ng-show="registerCtrl.loginInProgress" class="md-hue-2"  md-mode="indeterminate" md-theme="default"></md-progress-circular>
+      <div class="registration-error-message" ng-show="registerCtrl.error">
+        {{registerCtrl.error}}
+      </div>
+    </div>
   </strct-panel>
 </div>
