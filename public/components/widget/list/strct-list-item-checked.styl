@@ -1,0 +1,36 @@
+.strct-list-item-checkbox
+  margin 0
+  height 36px
+
+.strct-list-item-checkbox div
+  margin 0
+
+.strct-list-item-checkbox-main
+  cursor pointer
+/*
+ * Handle the 3 possible states for the icon/checkbox zone.
+ */
+
+/* hover one the icon/checkbox zone */
+
+.strct-list-item-checkbox-main:hover md-checkbox.strct-list-item-checkbox
+  display inline-block
+
+.strct-list-item-checkbox-main:hover md-icon
+  display none
+
+/* checked, hovered or not */
+
+.strct-list-item-checkbox-main md-checkbox.strct-list-item-checkbox[aria-checked="true"]
+  display inline-block
+
+.strct-list-item-checkbox-main md-checkbox.strct-list-item-checkbox[aria-checked="true"] + md-icon
+  display none
+
+/* ground state : not hovered, not checked */
+
+.strct-list-item-checkbox-main md-checkbox.strct-list-item-checkbox
+  display none
+
+.strct-list-item-checkbox-main md-icon
+  display inline-block

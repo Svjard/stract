@@ -1,0 +1,128 @@
+$strct-selecter-color = $label-info-color
+
+.strct-selecter
+  height 150px
+  width 150px
+  border-color $form-element-border-color
+  background-color $background-color
+  border-width 2px
+  border-style solid
+  stract-border-radius(3px)
+  -webkit-box-shadow 0 1px 1px rgba(0, 0, 0, 0.05)
+  box-shadow 0 1px 1px rgba(0, 0, 0, 0.05)
+  padding-top 12px
+  margin-left 16px
+  margin-right 16px
+  color $strct-selecter-color
+
+  &:hover
+    background-color $strct-selecter-color
+    color $background-color
+
+.strct-selecter .title
+  padding-top 4px
+  padding-bottom 3px
+
+.strct-selecter .body
+  height 50px
+  margin-bottom 8px
+
+.strct-selecter select
+  display block
+  box-shadow none
+  width 118px
+  height 20px
+  padding-left 3px
+  padding-right 22px
+  font-size 12px
+  -webkit-appearance none
+  -moz-appearance none
+  -ms-appearance none
+  appearance none
+
+.strct-selecter md-icon
+  font-size 60px
+  text-align center
+  margin-left auto
+  margin-right auto
+  margin-top 0px
+  margin-bottom 0px
+  padding 0px
+  height 74px
+  width 74px
+
+.strct-selecter .title
+  font-size 12px
+  text-align center
+  text-transform uppercase
+
+.strct-selecter select
+  margin-left 16px
+  margin-right 16px
+  display none
+
+.strct-selecter-active
+  border-color $primary-color
+  color $primary-color
+
+  &:hover
+    background-color $background-color
+
+
+.strct-selecter-active .body
+  background-color $primary-color
+
+.strct-selecter-active .title
+  background-color $primary-color
+  color $background-color
+
+.strct-selecter-active select
+  display block !important
+  color $primary-color
+  background-color $background-color
+
+.strct-selecter-active select:hover
+  background-color #fafafa
+  border-style solid
+  border-width 1px
+  text-align left
+  color $primary-color
+
+
+.strct-selecter-active:hover .body
+  background-color $primary-color !important
+  color $background-color
+
+.strct-selecter-active:hover md-icon
+  color $primary-color
+
+.strct-selecter:hover select
+  display block !important
+
+
+
+.strct-selecter:active .body
+  display block
+
+strct-selecter-icon()
+  content '\25BC'
+  margin-left -35px
+  margin-top 2px
+  pointer-events none
+  -webkit-transform scaleY(0.6) scaleX(1)
+  -ms-transform scaleY(0.6) scaleX(1)
+  transform scaleY(0.6) scaleX(1)
+  z-index 9
+
+.strct-selecter:hover .selecter:after
+  color $strct-selecter-color
+  strct-selecter-icon()
+
+.strct-selecter-active .selecter:after
+  strct-selecter-icon()
+
+strct-selecter md-card:focus
+  outline none
+
+strct-selecter
+  outline none

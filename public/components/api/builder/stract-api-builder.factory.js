@@ -14,6 +14,7 @@ class StractAPIBuilder {
    * @ngInject for Dependency injection
    */
   constructor () {
+  
   }
 
   /***

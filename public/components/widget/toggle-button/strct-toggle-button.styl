@@ -1,0 +1,34 @@
+strct-toggle-button
+strct-toggle-button .md-button
+  height 40px
+  margin-right 20px
+
+strct-toggle-button .md-button.md-default-theme
+  background-color transparent
+  color $primary-color
+  stract-border-radius(3px)
+  border 2px solid $primary-color
+
+strct-toggle-button .md-button.md-default-theme md-icon
+  color inherit
+
+strct-toggle-button .md-button.md-default-theme:not([disabled]):focus
+  background-color transparent
+
+strct-toggle-button .md-button.md-default-theme.strct-toggle-button-disabled
+  background-color $background-color
+  color $label-secondary-color
+  border-color $form-element-border-color
+
+strct-toggle-button md-icon
+  padding-left 10px
+  font-size 20px
+  width auto
+  height auto
+  padding-right 22px
+
+strct-toggle-button .strct-toggle-title
+  padding-right 20px
+
+strct-toggle-button .md-button.md-default-theme.strct-toggle-button-disabled md-icon
+  color $form-element-border-color

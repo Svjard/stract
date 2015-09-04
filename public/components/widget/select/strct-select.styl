@@ -1,0 +1,57 @@
+.strct-select .strct-select-container
+  outline none
+  border none
+  border-bottom 1px solid $default-border-color
+
+.strct-select md-input-container .strct-select-container
+  border-bottom 1px solid $default-border-color
+  margin-left -4px
+  width calc(100% + 4px)
+
+.strct-select .strct-select-desktop .strct-select-container
+  position relative
+  min-height 20px
+
+.strct-select md-input-container
+  margin-top 30px
+
+.strct-select md-input-container label
+  margin-top -47px
+
+.strct-select select
+  background inherit
+  outline none
+
+.strct-select .strct-select-desktop select
+  position absolute
+  z-index 1000
+
+.strct-select .strct-select-desktop select:not(.strct-select-border)
+  margin-left -4px
+  width calc(100% + 4px)
+  border none
+
+.strct-select .strct-select-desktop .strct-select-border
+  background $white-color
+  border-style solid
+  border-width 1.5px
+  border-color $primary-color
+
+.strct-select .strct-select-desktop select.strct-select-border
+  width 100%
+
+.strct-select select.disabled
+  color $disabled-color
+
+.strct-select select option:first-child
+  display none
+
+.strct-select select.disabled option:not(:first-child)
+  color $label-primary-color
+
+.strct-select-desktop select:focus
+  border-color $primary-color
+
+.strct-select-desktop
+  margin-top 5px
+  margin-bottom 20px

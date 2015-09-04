@@ -12,12 +12,26 @@ CREATE TABLE `User` (
   `Email` VARCHAR(100) NOT NULL,
   `PassHash` VARCHAR(1000) NOT NULL,
   `Salt` VARCHAR(1000) NOT NULL,
+  `IsVerified` TINYINT(1) DEFAULT 0,
   `LastLogin` TIMESTAMP,
   PRIMARY KEY(`ID`)
 );
 
-INSERT INTO `User` VALUES(NULL, 'Dev', 'Jones', 'stractsimdev@gmail.com', '$2a$10$I3bYZPCF6akaxseA2ovZ4OcLtrsihLxyu8nuirjjJYXuM8zAZsotq', '$2a$10$I3bYZPCF6akaxseA2ovZ4O', CURRENT_TIMESTAMP);
+INSERT INTO `User` VALUES(NULL, 'Dev', 'Jones', 'stractsimdev@gmail.com', '$2a$10$I3bYZPCF6akaxseA2ovZ4OcLtrsihLxyu8nuirjjJYXuM8zAZsotq', '$2a$10$I3bYZPCF6akaxseA2ovZ4O', 1, CURRENT_TIMESTAMP);
 -- stractsimdev:stractsimdev
+
+DROP TABLE IF EXISTS `SessionTokens`;
+CREATE TABLE `SessionTokens` (
+  `ID` BIGINT NOT NULL AUTO_INCREMENT,
+  `FirstName` VARCHAR(100) NOT NULL,
+  `LastName` VARCHAR(100) NOT NULL,
+  `Email` VARCHAR(100) NOT NULL,
+  `PassHash` VARCHAR(1000) NOT NULL,
+  `Salt` VARCHAR(1000) NOT NULL,
+  `LastLogin` TIMESTAMP,
+  PRIMARY KEY(`ID`)
+);
+
 
 DROP TABLE IF EXISTS `Company`;
 CREATE TABLE `Company` (

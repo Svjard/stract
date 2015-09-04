@@ -1,0 +1,17 @@
+<div ng-disabled="stractButtonDropdownCtrl.isDisabled"
+     class="strct-button-dropdown md-accent md-raised md-hue-2 md-button md-default-theme">
+  <span class="strct-button-click-area" ng-click="stractButtonDropdownCtrl.redirect(stractButtonDropdownCtrl.href)">{{stractButtonDropdownCtrl.labelText}}</span>
+  <span class="strct-button-dropdown-separator"></span>
+  <md-icon class="strct-button-dropdown-icon" ng-click="stractButtonDropdownCtrl.toggleDropDown()"
+           ng-blur="stractButtonDropdownCtrl.disableDropDown()" md-font-icon="fa fa-caret-down"></md-icon>
+  </md-button>
+</div>
+<div class="strct-button-dropdown-elements" ng-show="stractButtonDropdownCtrl.showDropdown">
+  <ul>
+    <li ng-repeat="link in stractButtonDropdownCtrl.ctrl.links">
+      <span class="strct-button-click-area" ng-click="stractButtonDropdownCtrl.redirect(link.href)">
+        {{link.name}}
+      </span>
+    </li>
+  </ul>
+</div>

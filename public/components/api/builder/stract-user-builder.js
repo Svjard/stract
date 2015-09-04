@@ -33,16 +33,6 @@ class StractUserBuilder {
   }
 
   /**
-   * Sets the aliases of the user
-   * @param aliases the aliases to use
-   * @returns {StractUserBuilder}
-   */
-  withAliases(aliases) {
-    this.user.aliases = aliases;
-    return this;
-  }
-
-  /**
    * Build the user
    * @returns {StractUserBuilder.user|*}
    */

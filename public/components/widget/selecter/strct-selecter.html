@@ -1,0 +1,18 @@
+<md-card class="strct-selecter"
+         ng-click="stractSelecterCtrl.select(name, title, valueModel)"
+         ng-class="{'strct-selecter-active' : '{{title}}' == stractSelecterCtrl.getSelected()}">
+  <md-icon md-font-icon="{{icon}}" flex layout="column" layout-align="start center"></md-icon>
+  <div class="body">
+    <div class="title">{{title}}</div>
+    <div class="selecter" layout="row">
+      <select class="stract-selecter"
+              ng-model="valueModel"
+              ng-init="stractSelecterCtrl.initType(title, values)"
+              ng-change="stractSelecterCtrl.onChangeType(title)"
+              name="typeSelected"
+              ng-options="{{options}}">
+        <option value="" ng-if="false"></option>
+      </select>
+    </div>
+  </div>
+</md-card>

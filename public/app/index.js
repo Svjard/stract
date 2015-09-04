@@ -70,7 +70,7 @@ initModule.config(['$routeProvider', function ($routeProvider) {
 import ComponentsConfig from '../components/components-config';
 
 import LoginCtrl from './login/login.controller';
-//import RegisterCtrl from './register/register.controller';
+import RegisterCtrl from './register/register.controller';
 
 //var instanceRegister = Register.getInstance();
 /*
@@ -84,7 +84,7 @@ new OnBoardConfig(instanceRegister);
 */
 
 // and setup controllers
-initModule.controller('LoginCtrl', LoginCtrl);//.controller('RegisterCtrl', RegisterCtrl);
+initModule.controller('LoginCtrl', LoginCtrl).controller('RegisterCtrl', RegisterCtrl);
 
 // config routes
 initModule.config(['$routeProvider', function ($routeProvider) {
@@ -94,11 +94,11 @@ initModule.config(['$routeProvider', function ($routeProvider) {
       controller: 'LoginCtrl',
       controllerAs: 'loginCtrl'
     })
-    /*.accessWhen('/register', {
+    .accessWhen('/register', {
       templateUrl: 'app/register/register.html',
       controller: 'RegisterCtrl',
       controllerAs: 'registerCtrl'
-    })*/
+    })
     .accessOtherWise({
       redirectTo: '/'
     });
@@ -117,8 +117,10 @@ class CheckLogin {
   }
 
   checkPage(path) {
-    console.log('path', path);
-    if ('app/main/login.html' === path) {
+    if ('app/login/login.html' === path) {
+      return true;
+    }
+    else if ('app/register/register.html' === path) {
       return true;
     }
     return false;
@@ -131,7 +133,7 @@ class CheckLogin {
     console.log('user', user);
     if (!user.Email) {
       console.log('change to login');
-      return {route:'/login'};
+      return { route:'/login' };
     }
 
     return {};
