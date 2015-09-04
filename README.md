@@ -1,5 +1,4 @@
-Stract
-======
+<p align="center"><img width="200"src="https://raw.githubusercontent.com/Svjard/stract/master/public/assets/images/logo.png"></p>
 
 ![Login Page Screenshot](https://raw.githubusercontent.com/Svjard/stract/master/uploads/login-screenshot.png)
 
