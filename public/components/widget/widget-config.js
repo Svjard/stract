@@ -1,9 +1,6 @@
 'use strict';
 
-import StractButtonPrimary from './button/strct-button-primary.directive';
-import StractButtonDanger from './button/strct-button-danger.directive';
-import StractButtonDefault from './button/strct-button-default.directive';
-import StractButtonWarning from './button/strct-button-warning.directive';
+import StractButton from './button/strct-button.directive';
 
 import StractLink from './link/strct-link.directive';
 

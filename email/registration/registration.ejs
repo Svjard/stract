@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head> 
+    <meta http-equiv="Content-Style-Type" content="text/css">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  </head>
+  <body style="font-family:Arial,Helvetica,sans-serif; font-size:14px; color:#1d3973; text-align:center; line-height:20px">
+    <table style="font-family:Arial,Helvetica,sans-serif; font-size:14px; color:#1d3973; background: #cfd5e1" align="center" cellpadding="0" cellspacing="0" width="620">
+      <tr>
+        <td colspan="3">
+          <a href="{{url}}?p={{token}}">
+            <img src="https://raw.githubusercontent.com/Svjard/stract/master/public/assets/images/logo.png" width="620" height="79" border="0" style="vertical-align: bottom;" alt="Stract" title="Stract">
+          </a>
+        </td>
+      </tr>
+      <tr>
+        <td width="10">
+          <img src="http://www.marinetraffic.com/img/emails/mt10.png" width="10" height="10" border="0" style="vertical-align: bottom;"> 
+        </td>
+        <td width="600" style="background: #fff; text-align:left; padding:15px;">
+          <p>Hello {{ name }},</p>
+          <p>Thank you for registering for Stract!</p>
+          <p>
+          Your login is: <b>{{ email }}</b> <br>
+          </p>    
+          <p>Please verify your email address to complete your registration.<br>
+            <a href="{{url}}?p={{token}}" style="line-height: 24px; padding: 5px 10px; border-radius: 5px; display: inline-block; background: none repeat scroll 0px 0px #00c1f9; box-shadow: 0px 1px 2px #808080; color: #fff; font-size: 14px;text-decoration:none; margin-top:14px; margin-right:20px">Verify email address</a>
+          </p>
+          <p style="color:#888;">If you are unable to use the button above, click the link below or copy and paste it into the address bar of your web browser:<br>
+            <span style="display:block; width:550px;">
+              <a style="color:#555;word-wrap: break-word;" href="{{url}}?p={{token}}">{{confirmUrl}}</a>
+            </span>
+          </p>
+          <p>Note that the link will remain active for 48 hours.</p>
+          <p>Regards,<br>The Stract team</p>
+        </td>
+        <td width="10">
+          <img src="http://www.marinetraffic.com/img/emails/mt10.png" width="10" height="10" border="0" style="vertical-align: bottom;">
+        </td>
+      </tr>
+      <tr>
+        <td width="620" colspan="3">
+          <table width="100%" cellspacing="0" cellpadding="30" style="color:#666666;font:13px helvetica,arial,sans-serif">
+            <tbody>
+              <tr>
+                <td style="color:#777777;font-size:11px;line-height:20px;padding:10px 15px;text-align:left;vertical-align: middle;">&copy; 2015 Stract</td>
+                <td style="color:#777777;font-size:11px;line-height:20px;text-align:right; padding:10px 15px">
+                  <a target="_blank" style="color:#40a1c9;margin-left:4px;text-decoration:none" title="Connect with MarineTraffic on Facebook" href="http://mandrillapp.com/track/click/30021429/www.facebook.com?p=eyJzIjoiNW5PamVHZGIzREtQWHRyR1pyZ0NUQlJlOUJFIiwidiI6MSwicCI6IntcInVcIjozMDAyMTQyOSxcInZcIjoxLFwidXJsXCI6XCJodHRwOlxcXC9cXFwvd3d3LmZhY2Vib29rLmNvbVxcXC9tYXJpbmV0cmFmZmljXCIsXCJpZFwiOlwiOTQwYmZhYzVmZDMzNGI4ZjgzNGU4MTJjNzEzMmE5ZWJcIixcInVybF9pZHNcIjpbXCI1MWVmMTA1MWIzMDM5N2ExYjY0YTYxZDVkOTM4ZDk3NjRlZTFjYjg3XCJdfSJ9">
+                    <img width="25" border="0" height="25" alt="MarineTraffic on Facebook" src="http://www.marinetraffic.com/img/emails/icon-facebook.png">
+                  </a>
+                  <a target="_blank" style="color:#40a1c9;margin-left:4px;text-decoration:none" title="follow @MarineTraffic on Twitter" href="http://mandrillapp.com/track/click/30021429/www.twitter.com?p=eyJzIjoib3BRbHhOc1owZXlWUFRZX1NiSjQ1RXFqTzJBIiwidiI6MSwicCI6IntcInVcIjozMDAyMTQyOSxcInZcIjoxLFwidXJsXCI6XCJodHRwOlxcXC9cXFwvd3d3LnR3aXR0ZXIuY29tXFxcL21hcmluZXRyYWZmaWNcIixcImlkXCI6XCI5NDBiZmFjNWZkMzM0YjhmODM0ZTgxMmM3MTMyYTllYlwiLFwidXJsX2lkc1wiOltcIjdiNGI1YTJjY2MyZmEyMjY0MDE0ZWFlN2NlZmI4Njk5YmUwODViYmVcIl19In0">
+                    <img width="25" border="0" height="25" alt="MarineTraffic on Twitter" src="http://www.marinetraffic.com/img/emails/icon-twitter.png">
+                  </a>
+                  <a target="_blank" style="color:#40a1c9;margin-left:4px;text-decoration:none" title="Connect with MarineTraffic on Google+" href="http://mandrillapp.com/track/click/30021429/plus.google.com?p=eyJzIjoiVEFFMHNzSG11blRBZXV3XzFwZGpxTVlNVk9nIiwidiI6MSwicCI6IntcInVcIjozMDAyMTQyOSxcInZcIjoxLFwidXJsXCI6XCJodHRwczpcXFwvXFxcL3BsdXMuZ29vZ2xlLmNvbVxcXC9iXFxcLzExMDQ4MzIwMjU2NjIzMTA4NDI2N1xcXC8rbWFyaW5ldHJhZmZpY1xcXC9wb3N0c1wiLFwiaWRcIjpcIjk0MGJmYWM1ZmQzMzRiOGY4MzRlODEyYzcxMzJhOWViXCIsXCJ1cmxfaWRzXCI6W1wiYjdjZDc2MzhhNmUwODY3ZDMwYzI3NDFlODBhODJmM2Y4ZmRjMTdlM1wiXX0ifQ">
+                    <img width="25" border="0" height="25" alt="MarineTraffic Google+ Page" src="http://www.marinetraffic.com/img/emails/icon-google.png">
+                  </a>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </td>
+      </tr>
+      <tr>
+        <td colspan="3" style="text-align:center; background-color:#fff">
+          <span style="font-family:Arial,Helvetica,sans-serif;color:#777777;font-size:11px;line-height:14px;padding:0 10px;text-align:left;vertical-align: middle;margin:0 auto;">Please do not reply to this email, as we are not able to respond to messages sent to this address.</span>
+        </td>
+      </tr>
+    </table>
+    <img src="http://mandrillapp.com/track/open.php?u=30021429&id=940bfac5fd334b8f834e812c7132a9eb" height="1" width="1">
+  </body>
+</html>

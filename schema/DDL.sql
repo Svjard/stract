@@ -20,18 +20,19 @@ CREATE TABLE `User` (
 INSERT INTO `User` VALUES(NULL, 'Dev', 'Jones', 'stractsimdev@gmail.com', '$2a$10$I3bYZPCF6akaxseA2ovZ4OcLtrsihLxyu8nuirjjJYXuM8zAZsotq', '$2a$10$I3bYZPCF6akaxseA2ovZ4O', 1, CURRENT_TIMESTAMP);
 -- stractsimdev:stractsimdev
 
-DROP TABLE IF EXISTS `SessionTokens`;
-CREATE TABLE `SessionTokens` (
+DROP TABLE IF EXISTS `SessionToken`;
+CREATE TABLE `SessionToken` (
   `ID` BIGINT NOT NULL AUTO_INCREMENT,
-  `FirstName` VARCHAR(100) NOT NULL,
-  `LastName` VARCHAR(100) NOT NULL,
-  `Email` VARCHAR(100) NOT NULL,
-  `PassHash` VARCHAR(1000) NOT NULL,
-  `Salt` VARCHAR(1000) NOT NULL,
-  `LastLogin` TIMESTAMP,
+  `Token` VARCHAR(1000) NOT NULL,
+  `ExpiresOn` TIMESTAMP,
   PRIMARY KEY(`ID`)
 );
 
+DROP TABLE IF EXISTS `Profile`;
+CREATE TABLE `Profile` (
+  `Email` VARCHAR(100) NOT NULL
+  PRIMARY KEY(`Email`)
+);
 
 DROP TABLE IF EXISTS `Company`;
 CREATE TABLE `Company` (

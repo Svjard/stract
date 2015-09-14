@@ -29,7 +29,7 @@
         </div>
       </strct-input>
 
-      <strct-button-primary ng-click="loginCtrl.submit()" strct-button-title="Login"></strct-button-primary>
+      <strct-button strct-button-type="primary" ng-click="loginCtrl.submit()" strct-button-title="Login"></strct-button>
       <div layout="column" layout-align="center center">
         <md-progress-circular ng-show="loginCtrl.loginInProgress" class="md-hue-2"  md-mode="indeterminate" md-theme="default"></md-progress-circular>
         <div class="login-error-message" ng-show="loginCtrl.error">

@@ -28,8 +28,8 @@ class LoginCtrl {
       method: 'POST',
       data: loginData
     }).then((response) => {
-      this.$cookies.token = response.data.value;
-      this.$window.sessionStorage['stractToken'] = response.data.value;
+      this.$cookies.token = response.data.token;
+      this.$window.sessionStorage['stractToken'] = response.data.token;
       this.$cookies.refreshStatus = 'DISABLED';
 
       // update user

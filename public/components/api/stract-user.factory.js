@@ -11,14 +11,14 @@ class StractUser {
    * Default constructor that is using resource
    * @ngInject for Dependency injection
    */
-  constructor ($resource, $q) {
+  constructor ($resource, $q, $window) {
 
     // keep resource
     this.$resource = $resource;
     this.$q = $q;
 
     // remote call
-    this.remoteUserAPI = this.$resource('/api/user',{}, {
+    this.remoteUserAPI = this.$resource('/api/user/:token',{ token: $window.sessionStorage['stractToken'] }, {
       findByID: {method: 'GET', url: '/api/user/:userId'},
       findByEmail: {method: 'GET', url: '/api/user/find?email=:userEmail'},
       setPassword: {

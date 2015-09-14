@@ -1,7 +1,9 @@
 'use strict';
 
+import Register from '../../utils/register';
+
 /**
- * Defines the super class for for all buttons
+ * Defines the main class for for all buttons
  */
 class StractButton {
 
@@ -21,7 +23,20 @@ class StractButton {
    * @returns {string} the template
    */
   template(element, attrs) {
-    var template = this.getTemplateStart();
+    var template = '<md-button ';
+
+    if (attrs.strctButtonType === 'danger') {
+      template = template + ' md-theme=\"danger\" class=\"strct-button md-accent md-raised md-hue-3\"';
+    }
+    else if (attrs.strctButtonType === 'warning') {
+      template = template + ' md-theme=\"warning\" class=\"strct-button md-accent md-raised md-hue-3\"';
+    }
+    else if (attrs.strctButtonType === 'primary') {
+      template = template + ' md-theme=\"default\" class=\"strct-button md-accent md-raised md-hue-2\"';
+    }
+    else {
+      template = template + ' md-theme=\"strctdefault\" class=\"strct-button md-accent md-raised md-hue-2\"';
+    }
 
     if (attrs.href) {
       template = template + ` href="${attrs.href}"`;
@@ -72,3 +87,5 @@ class StractButton {
 }
 
 export default StractButton;
+
+Register.getInstance().directive('strctButton', StractButton);
