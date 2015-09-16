@@ -3,43 +3,17 @@
 var gulp = require('gulp');
 var paths = gulp.paths;
 var util = require('util');
-var browserSync = require('browser-sync');
-var middleware = require('./proxy');
+var gls = require('gulp-live-server');
 
-function browserSyncInit(baseDir, files, browser) {
-  browser = browser === undefined ? 'default' : browser;
+gulp.task('serve', ['watch'], function() {
+  var server = gls.new('./index.js');
+  server.start();
 
-  var routes = null;
-  if(baseDir === paths.src || (util.isArray(baseDir) && baseDir.indexOf(paths.src) !== -1)) {
-    routes = {
-      '/bower_components': 'bower_components'
-    };
-  }
-
-  browserSync.instance = browserSync.init(files, {
-    startPath: '/',
-    server: {
-      baseDir: baseDir,
-      middleware: middleware,
-      routes: routes
-    },
-    port: 5000,
-    browser: browser
+  // use gulp.watch to trigger server actions(notify, start or stop)
+  gulp.watch(['static/**/*.css', 'static/**/*.html'], function (file) {
+    server.notify.apply(server, [file]);
   });
-}
-
-gulp.task('serve', ['watch'], function () {
-  browserSyncInit([
-    paths.tmp + '/serve',
-    paths.src
-  ], [
-    paths.tmp + '/serve/{app,components}/**/*.css',
-    paths.tmp + '/serve/{app,components}/**/*.js',
-    paths.src + 'src/assets/images/**/*',
-    paths.tmp + '/serve/*.html',
-    paths.tmp + '/serve/{app,components}/**/*.html',
-    paths.src + '/{app,components}/**/*.html'
-  ]);
+  gulp.watch('./index.js', server.start.bind(server)); //restart my server
 });
 
 gulp.task('serve:app', ['serve'], function () {

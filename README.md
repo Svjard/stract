@@ -19,7 +19,13 @@ actual data from several different sources.
 
 ## Getting Started
 
-More details coming soon...
+````javascript
+npm install -g bower gulp karma protractor  
+npm install && bower install  
+gulp serve
+```
+
+Then open your browser to http://localhost:6565
 
 ## Contribute
 

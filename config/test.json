@@ -1,8 +1,9 @@
 {
   "db": {
-    "url": "localhost",
+    "host": "localhost",
     "port": 3306,
-    "user": "stractsimtest",
-    "password": "test"
+    "user": "stractsimdev",
+    "password": "stractsimdev",
+    "database": "stractdev"
   }
 }

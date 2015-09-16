@@ -22,8 +22,10 @@ exports.config = {
     }
   },
 
+  // 
+
   onPrepare: function () {
-    browser.driver.get('http://localhost:5000');
+    browser.driver.get('http://localhost:6565');
   },
 
   // Spec patterns are relative to the current working directly when

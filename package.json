@@ -5,7 +5,7 @@
   "description": "An online multiplayer simulation based on running a maritime shipping company in the global commodities trade.",
   "homepage": "https://github.com/stractsim/stract",
   "bugs": "https://github.com/stractsim/stract/issues",
-  "license": "GPLv2",
+  "license": "GPL-2.0",
   "contributors": [
     {
       "name": "Marc Fisher",
@@ -15,6 +15,20 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/stractsim/stract"
+  },
+  "scripts": {
+    "start" : "node index.js production",
+    "test" : "./node_modules/mocha/bin/mocha -R spec lib/**/*.spec.js"
+  },
+  "scripts": {
+    "pioneer": "node_modules/pioneer/bin/pioneer",
+    "e2e": "protractor protractor.conf.js",
+    "e2ed": "protractor debug protractor.conf.js",
+    "test": "mocha -R spec ./lib/**/*.spec.js && gulp test && protractor ./gulp/config/protractor.conf.bs.js",
+    "testd": "DEBUG=true gulp test",
+    "start": "gulp serve",
+    "release": "gulp dist && gulp dist:rev && git checkout -f gh-pages && gulp copy:dist",
+    "build": "gulp build && gulp style"
   },
   "config": {
     "port": 6565
@@ -38,14 +52,17 @@
     "jsonwebtoken": "~5.0.5",
     "lodash": "~3.10.1",
     "method-override": "~2.3.5",
+    "mocha": "~2.3.2",
     "moment": "~2.10.6",
     "morgan": "git+https://git@github.com/Svjard/morgan.git",
     "mysql": "^2.9.0",
     "nodemailer": "~1.4.0",
     "nodemailer-ses-transport": "~1.3.0",
+    "really-need": "~1.6.3",
     "requirejs": "~2.1.20",
     "rollbar": "~0.5.6",
     "serve-static": "~1.10.0",
+    "supertest": "~1.1.0",
     "ws": "~0.8.0"
   },
   "devDependencies": {
@@ -66,8 +83,10 @@
     "gulp-inject": "~1.0.2",
     "gulp-jshint": "~1.9.0",
     "gulp-karma": "~0.0.4",
+    "gulp-live-server": "*",
     "gulp-load-plugins": "~0.7.1",
     "gulp-minify-html": "~0.1.7",
+    "gulp-mocha": "~2.1.3",
     "gulp-ng-annotate": "~1.1.0",
     "gulp-ngdocs": "^0.2.10",
     "gulp-notify": "^2.2.0",

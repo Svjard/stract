@@ -16,9 +16,9 @@ class StractHttpBackend {
     this.userEmailMap = new Map();
     this.profilesMap = new Map();
 
-    this.defaultUser = stractAPIBuilder.getUserBuilder().withId('idDefaultUser').withEmail('defaultuser@stractsim.com').build();
-    this.defaultProfile = stractAPIBuilder.getProfileBuilder().withId('idDefaultUser').withEmail('defaultuser@stractsim.com').withFirstName('FirstName').withLastName('LastName').build();
-    this.defaultProfilePrefs = {onBoardingFlowCompleted: 'true'};
+    this.defaultUser = stractAPIBuilder.getUserBuilder().withId('idDefaultUser').withEmail('defaultUser@stractsim.com').build();
+    this.defaultProfile = stractAPIBuilder.getProfileBuilder().withId('idDefaultUser').withEmail('defaultUser@stractsim.com').withFirstName('FirstName').withLastName('LastName').build();
+    this.defaultProfilePrefs = {};
   }
 
   /**
@@ -42,8 +42,6 @@ class StractHttpBackend {
     for (let key of profileKeys) {
       this.httpBackend.when('GET', '/api/profile/' + key).respond(this.profilesMap.get(key));
     }
-
-    //this.httpBackend.when('POST', '/api/analytics/log/session-usage').respond();
   }
 
   /**

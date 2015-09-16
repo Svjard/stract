@@ -1,10 +1,33 @@
-node_modules/
-bower_components/
-.sass-cache/
+# Windows image file caches
+Thumbs.db
+
+# Folder config file
+Desktop.ini
+
+#Translations
+*.mo
+
+# Mac crap
+.DS_Store
+
+*.sublime-*
+
+# custom echoes files
+node_modules
 .tmp/
 tmp
 coverage
 dist/
+.sass-cache/
+bower_components/
+bundle*.js
+bundle*.map
+*.css.map
+*.tmp.*
+style.css
+npm-debug.log
+vendors*.js
+templates*.mdl*.js
 
 .idea/
 *.iml

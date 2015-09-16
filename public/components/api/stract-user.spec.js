@@ -53,8 +53,8 @@ describe('StractUser', function () {
    */
   it('Fetch user', function () {
       // setup tests objects
-      var userId = 'idTestUser';
-      var email = 'testuser@stractsim.com';
+      var userId = 1;
+      var email = 'defaultUser@stractsim.com';
 
       var testUser = apiBuilder.getUserBuilder().withId(userId).withEmail(email).build();
 
@@ -88,8 +88,8 @@ describe('StractUser', function () {
    */
   it('Fetch user by id', function () {
       // setup tests objects
-      var userId = 'newIdTestUser';
-      var email = 'testuser@stractsim.com';
+      var userId = 1;
+      var email = 'defaultUser@stractsim.com';
 
       var testUser = apiBuilder.getUserBuilder().withId(userId).withEmail(email).build();
 
@@ -123,8 +123,8 @@ describe('StractUser', function () {
    */
   it('Fetch user by email', function () {
       // setup tests objects
-      var userId = 'testUser';
-      var email = 'newuseremail@stractsim.com';
+      var userId = 1;
+      var email = 'defaultUser@stractsim.com';
 
       var testUser = apiBuilder.getUserBuilder().withId(userId).withEmail(email).build();
 

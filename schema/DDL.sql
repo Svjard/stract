@@ -1,92 +1,80 @@
-CREATE DATABASE IF NOT EXISTS `stractdev`;
+CREATE DATABASE stract;
 
-CREATE USER 'stractsimdev'@'localhost' IDENTIFIED BY 'stractsimdev';
-GRANT ALL PRIVILEGES ON stractdev.* TO 'stractsimdev'@'localhost';
-FLUSH PRIVILEGES;
+CREATE USER stractsim WITH PASSWORD 'stractsim';
+GRANT ALL PRIVILEGES ON DATABASE stract TO stractsim;
 
-DROP TABLE IF EXISTS `User`;
-CREATE TABLE `User` (
-  `ID` BIGINT NOT NULL AUTO_INCREMENT,
-  `FirstName` VARCHAR(100) NOT NULL,
-  `LastName` VARCHAR(100) NOT NULL,
-  `Email` VARCHAR(100) NOT NULL,
-  `PassHash` VARCHAR(1000) NOT NULL,
-  `Salt` VARCHAR(1000) NOT NULL,
-  `IsVerified` TINYINT(1) DEFAULT 0,
-  `LastLogin` TIMESTAMP,
-  PRIMARY KEY(`ID`)
+DROP TABLE IF EXISTS User;
+CREATE TABLE User (
+  ID bigserial PRIMARY KEY,
+  FirstName varchar(100) NOT NULL,
+  LastName varchar(100) NOT NULL,
+  Email varchar(100) NOT NULL,
+  PassHash varchar(1000) NOT NULL,
+  Salt varchar(1000) NOT NULL,
+  IsVerified smallint(1) DEFAULT 0,
+  LastLogin timestamp
 );
 
-INSERT INTO `User` VALUES(NULL, 'Dev', 'Jones', 'stractsimdev@gmail.com', '$2a$10$I3bYZPCF6akaxseA2ovZ4OcLtrsihLxyu8nuirjjJYXuM8zAZsotq', '$2a$10$I3bYZPCF6akaxseA2ovZ4O', 1, CURRENT_TIMESTAMP);
+INSERT INTO User VALUES(NULL, 'Dev', 'Jones', 'stractsimdev@gmail.com', '$2a$10$I3bYZPCF6akaxseA2ovZ4OcLtrsihLxyu8nuirjjJYXuM8zAZsotq', '$2a$10$I3bYZPCF6akaxseA2ovZ4O', 1, CURRENT_TIMESTAMP);
 -- stractsimdev:stractsimdev
 
-DROP TABLE IF EXISTS `SessionToken`;
-CREATE TABLE `SessionToken` (
-  `ID` BIGINT NOT NULL AUTO_INCREMENT,
-  `Token` VARCHAR(1000) NOT NULL,
-  `ExpiresOn` TIMESTAMP,
-  PRIMARY KEY(`ID`)
+DROP TABLE IF EXISTS Profile;
+CREATE TABLE Profile (
+  Email varchar(100) PRIMARY KEY
 );
 
-DROP TABLE IF EXISTS `Profile`;
-CREATE TABLE `Profile` (
-  `Email` VARCHAR(100) NOT NULL
-  PRIMARY KEY(`Email`)
+DROP TABLE IF EXISTS Company;
+CREATE TABLE Company (
+  ID bigserial PRIMARY KEY,
+  Name varchar(100) NOT NULL,
+  Country_Name varchar(100) NOT NULL,
+  User bigint NOT NULL,
+  CreatedOn timestamp
 );
 
-DROP TABLE IF EXISTS `Company`;
-CREATE TABLE `Company` (
-  `ID` BIGINT NOT NULL AUTO_INCREMENT,
-  `Name` VARCHAR(100) NOT NULL,
-  `Country_Name` VARCHAR(100) NOT NULL,
-  `User` BIGINT NOT NULL,
-  `CreatedOn` TIMESTAMP,
-  PRIMARY KEY(`ID`)
-);
+INSERT INTO Company VALUES(NULL, 'Stract Shipping Co', 'US', 1, CURRENT_TIMESTAMP);
 
-INSERT INTO `Company` VALUES(NULL, 'Stract Shipping Co', 'US', 1, CURRENT_TIMESTAMP);
-
-DROP TABLE IF EXISTS `TaxRates`;
+DROP TABLE IF EXISTS TaxRates;
 CREATE TABLE TaxRates (
-  Country_Name VARCHAR(100) NOT NULL,
+  Country_Name varchar(100) NOT NULL,
   TaxRate DECIMAL(18, 2) NOT NULL
 );
 
-LOAD DATA LOCAL INFILE 'tax-rates.txt' INTO TABLE `TaxRates`;
+LOAD DATA LOCAL INFILE 'tax-rates.txt' INTO TABLE TaxRates;
 
-DROP TABLE IF EXISTS `Commodities`;
+DROP TABLE IF EXISTS Commodities;
 CREATE TABLE Commodities (
-  ID INT AUTO_INCREMENT PRIMARY KEY,
-  Name VARCHAR(100) NOT NULL,
-  Reference VARCHAR(100)
+  ID bigserial PRIMARY KEY,
+  Name varchar(100) NOT NULL,
+  Reference varchar(100)
 );
 
-DROP TABLE IF EXISTS `CountryExports`;
+DROP TABLE IF EXISTS CountryExports;
 CREATE TABLE CountryExports (
-  Country_Name VARCHAR(100) NOT NULL,
-  Commodity_Name VARCHAR(100) NOT NULL,
+  Country_Name varchar(100) NOT NULL,
+  Commodity_Name varchar(100) NOT NULL,
   Value DECIMAL(18, 2) NOT NULL,
-  Year INT NOT NULL
+  Year int NOT NULL
 );
 
 CREATE TABLE CountryImports (
-  Country_Name VARCHAR(100) NOT NULL,
-  Commodity_Name VARCHAR(100) NOT NULL,
+  Country_Name varchar(100) NOT NULL,
+  Commodity_Name varchar(100) NOT NULL,
   Value DECIMAL(18, 2) NOT NULL,
-  Year INT NOT NULL
+  Year int NOT NULL
 );
 
 CREATE TABLE Company_Funds (
-  Company INT NOT NULL,
+  Company int NOT NULL,
   Funds DECIMAL(10, 8),
   LastUpdated TIMESTAMP
 );
 
 CREATE TABLE Ports (
-  Name VARCHAR(100),
+  Name varchar(100),
   ID INTEGER,
-  Code VARCHAR(20),
-  Country VARCHAR(100),
+  Code varchar(20),
+  Country varchar(100),
   Longitude DECIMAL(10, 8),
   Latitude DECIMAL(10, 8),
   Timezone TIME
