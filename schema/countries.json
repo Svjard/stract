@@ -9,15 +9,6 @@
     "sub-region-code":"034"
   },
   {
-    "name":"Åland Islands",
-    "alpha-2":"AX",
-    "alpha-3":"ALA",
-    "country-code":"248",
-    "iso_3166-2":"ISO 3166-2:AX",
-    "region-code":"150",
-    "sub-region-code":"154"
-  },
-  {
     "name":"Albania",
     "alpha-2":"AL",
     "alpha-3":"ALB",
@@ -2151,7 +2142,7 @@
     "sub-region-code":"005"
   },
   {
-    "name":"Viet Nam",
+    "name":"Vietnam",
     "alpha-2":"VN",
     "alpha-3":"VNM",
     "country-code":"704",

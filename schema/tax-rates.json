@@ -1,0 +1,469 @@
+[{
+  "country": "AE",
+  "rate": 55
+},{
+  "country": "TD",
+  "rate": 40
+},{
+  "country": "PR",
+  "rate": 39
+},{
+  "country": "US",
+  "rate": 39
+},{
+  "country": "SR",
+  "rate": 36
+},{
+  "country": "AR",
+  "rate": 35
+},{
+  "country": "CG",
+  "rate": 35
+},{
+  "country": "GQ",
+  "rate": 35
+},{
+  "country": "GA",
+  "rate": 35
+},{
+  "country": "GU",
+  "rate": 35
+},{
+  "country": "GQ",
+  "rate": 35
+},{
+  "country": "MT",
+  "rate": 35
+},{
+  "country": "SS",
+  "rate": 35
+},{
+  "country": "ZM",
+  "rate": 35
+},{
+  "country": "IO",
+  "rate": 34.61
+},{
+  "country": "BR",
+  "rate": 34
+},{
+  "country": "VE",
+  "rate": 34
+},{
+  "country": "FR",
+  "rate": 33.3
+},{
+  "country": "JP",
+  "rate": 33.06
+},{
+  "country": "BE",
+  "rate": 33
+},{
+  "country": "CM",
+  "rate": 33
+},{
+  "country": "NA",
+  "rate": 33
+},{
+  "country": "PK",
+  "rate": 33
+},{
+  "country": "SC",
+  "rate": 33
+},{
+  "country": "MZ",
+  "rate": 32
+},{
+  "country": "IT",
+  "rate": 31.4
+},{
+  "country": "AO",
+  "rate": 30
+},{
+  "country": "AU",
+  "rate": 30
+},{
+  "country": "CR",
+  "rate": 30
+},{
+  "country": "SV",
+  "rate": 30
+},{
+  "country": "ET",
+  "rate": 30
+},{
+  "country": "HN",
+  "rate": 30
+},{
+  "country": "KE",
+  "rate": 30
+},{
+  "country": "MW",
+  "rate": 30
+},{
+  "country": "MX",
+  "rate": 30
+},{
+  "country": "MA",
+  "rate": 30
+},{
+  "country": "NI",
+  "rate": 30
+},{
+  "country": "NG",
+  "rate": 30
+},{
+  "country": "PG",
+  "rate": 30
+},{
+  "country": "PE",
+  "rate": 30
+},{
+  "country": "PH",
+  "rate": 30
+},{
+  "country": "CG",
+  "rate": 30
+},{
+  "country": "RW",
+  "rate": 30
+},{
+  "country": "SN",
+  "rate": 30
+},{
+  "country": "SL",
+  "rate": 30
+},{
+  "country": "TZ",
+  "rate": 30
+},{
+  "country": "UG",
+  "rate": 30
+},{
+  "country": "DE",
+  "rate": 29.65
+},{
+  "country": "LU",
+  "rate": 29.22
+},{
+  "country": "AW",
+  "rate": 28
+},{
+  "country": "NZ",
+  "rate": 28
+},{
+  "country": "ZA",
+  "rate": 28
+},{
+  "country": "ES",
+  "rate": 28
+},{
+  "country": "LK",
+  "rate": 28
+},{
+  "country": "BD",
+  "rate": 27.5
+},{
+  "country": "SZ",
+  "rate": 27.5
+},{
+  "country": "DO",
+  "rate": 27
+},{
+  "country": "NO",
+  "rate": 27
+},{
+  "country": "AS",
+  "rate": 27
+},{
+  "country": "CA",
+  "rate": 26.5
+},{
+  "country": "IL",
+  "rate": 26.5
+},{
+  "country": "GR",
+  "rate": 26
+},{
+  "country": "ZW",
+  "rate": 25.75
+},{
+  "country": "AT",
+  "rate": 25
+},{
+  "country": "BB",
+  "rate": 25
+},{
+  "country": "BO",
+  "rate": 25
+},{
+  "country": "CN",
+  "rate": 25
+},{
+  "country": "CO",
+  "rate": 25
+},{
+  "country": "EG",
+  "rate": 25
+},{
+  "country": "GH",
+  "rate": 25
+},{
+  "country": "GT",
+  "rate": 25
+},{
+  "country": "ID",
+  "rate": 25
+},{
+  "country": "CI",
+  "rate": 25
+},{
+  "country": "JM",
+  "rate": 25
+},{
+  "country": "LS",
+  "rate": 25
+},{
+  "country": "MY",
+  "rate": 25
+},{
+  "country": "MR",
+  "rate": 25
+},{
+  "country": "MN",
+  "rate": 25
+},{
+  "country": "MM",
+  "rate": 25
+},{
+  "country": "NL",
+  "rate": 25
+},{
+  "country": "PA",
+  "rate": 25
+},{
+  "country": "TT",
+  "rate": 25
+},{
+  "country": "TN",
+  "rate": 25
+},{
+  "country": "UY",
+  "rate": 25
+},{
+  "country": "KR",
+  "rate": 24.2
+},{
+  "country": "LA",
+  "rate": 24
+},{
+  "country": "DK",
+  "rate": 23.5
+},{
+  "country": "DZ",
+  "rate": 23
+},{
+  "country": "CL",
+  "rate": 22.5
+},{
+  "country": "BW",
+  "rate": 22
+},{
+  "country": "EC",
+  "rate": 22
+},{
+  "country": "SK",
+  "rate": 22
+},{
+  "country": "SE",
+  "rate": 22
+},{
+  "country": "SY",
+  "rate": 22
+},{
+  "country": "VN",
+  "rate": 22
+},{
+  "country": "PT",
+  "rate": 21
+},{
+  "country": "AF",
+  "rate": 20
+},{
+  "country": "AM",
+  "rate": 20
+},{
+  "country": "AZ",
+  "rate": 20
+},{
+  "country": "KH",
+  "rate": 20
+},{
+  "country": "HR",
+  "rate": 20
+},{
+  "country": "EE",
+  "rate": 20
+},{
+  "country": "FJ",
+  "rate": 20
+},{
+  "country": "FI",
+  "rate": 20
+},{
+  "country": "IS",
+  "rate": 20
+},{
+  "country": "JO",
+  "rate": 20
+},{
+  "country": "KZ",
+  "rate": 20
+},{
+  "country": "LY",
+  "rate": 20
+},{
+  "country": "MG",
+  "rate": 20
+},{
+  "country": "RU",
+  "rate": 20
+},{
+  "country": "SA",
+  "rate": 20
+},{
+  "country": "TH",
+  "rate": 20
+},{
+  "country": "TR",
+  "rate": 20
+},{
+  "country": "GB",
+  "rate": 20
+},{
+  "country": "YE",
+  "rate": 20
+},{
+  "country": "CZ",
+  "rate": 19
+},{
+  "country": "HU",
+  "rate": 19
+},{
+  "country": "PL",
+  "rate": 19
+},{
+  "country": "BN",
+  "rate": 18.5
+},{
+  "country": "BY",
+  "rate": 18
+},{
+  "country": "UA",
+  "rate": 18
+},{
+  "country": "CH",
+  "rate": 17.92
+},{
+  "country": "SG",
+  "rate": 17
+},{
+  "country": "SI",
+  "rate": 17
+},{
+  "country": "TW",
+  "rate": 17
+},{
+  "country": "HK",
+  "rate": 16.5
+},{
+  "country": "RO",
+  "rate": 16
+},{
+  "country": "AL",
+  "rate": 15
+},{
+  "country": "GE",
+  "rate": 15
+},{
+  "country": "IQ",
+  "rate": 15
+},{
+  "country": "KW",
+  "rate": 15
+},{
+  "country": "LV",
+  "rate": 15
+},{
+  "country": "LB",
+  "rate": 15
+},{
+  "country": "LT",
+  "rate": 15
+},{
+  "country": "MU",
+  "rate": 15
+},{
+  "country": "RS",
+  "rate": 15
+},{
+  "country": "CY",
+  "rate": 12.5
+},{
+  "country": "IE",
+  "rate": 12.5
+},{
+  "country": "LI",
+  "rate": 12.5
+},{
+  "country": "MO",
+  "rate": 12
+},{
+  "country": "MD",
+  "rate": 12
+},{
+  "country": "OM",
+  "rate": 12
+},{
+  "country": "BA",
+  "rate": 10
+},{
+  "country": "BG",
+  "rate": 10
+},{
+  "country": "MK",
+  "rate": 10
+},{
+  "country": "PY",
+  "rate": 10
+},{
+  "country": "QA",
+  "rate": 10
+},{
+  "country": "ME",
+  "rate": 9
+},{
+  "country": "UZ",
+  "rate": 8
+},{
+  "country": "BS",
+  "rate": 0
+},{
+  "country": "BH",
+  "rate": 0
+},{
+  "country": "BM",
+  "rate": 0
+},{
+  "country": "KY",
+  "rate": 0
+},{
+  "country": "IM",
+  "rate": 0
+},{
+  "country": "MV",
+  "rate": 0
+},{
+  "country": "VU",
+  "rate": 0
+}]

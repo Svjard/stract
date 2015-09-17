@@ -3,20 +3,20 @@ CREATE DATABASE stract;
 CREATE USER stractsim WITH PASSWORD 'stractsim';
 GRANT ALL PRIVILEGES ON DATABASE stract TO stractsim;
 
-DROP TABLE IF EXISTS User;
-CREATE TABLE User (
+DROP TABLE IF EXISTS StractUser;
+CREATE TABLE StractUser (
   ID bigserial PRIMARY KEY,
   FirstName varchar(100) NOT NULL,
   LastName varchar(100) NOT NULL,
   Email varchar(100) NOT NULL,
   PassHash varchar(1000) NOT NULL,
   Salt varchar(1000) NOT NULL,
-  IsVerified smallint(1) DEFAULT 0,
+  IsVerified smallint NOT NULL DEFAULT 0,
   LastLogin timestamp
 );
 
-INSERT INTO User VALUES(NULL, 'Dev', 'Jones', 'stractsimdev@gmail.com', '$2a$10$I3bYZPCF6akaxseA2ovZ4OcLtrsihLxyu8nuirjjJYXuM8zAZsotq', '$2a$10$I3bYZPCF6akaxseA2ovZ4O', 1, CURRENT_TIMESTAMP);
--- stractsimdev:stractsimdev
+INSERT INTO StractUser (FirstName, LastName, Email, PassHash, Salt, IsVerified, LastLogin) VALUES('Sam', 'Jones', 'defaultUser@stractsim.com', '$2a$06$ZiviZYvrfND2TCo87Fk7muzx5lHNh9AdvmC0xqxt6PGwFDM4Z8uSi', '$2a$06$ZiviZYvrfND2TCo87Fk7mu', 1, CURRENT_TIMESTAMP);
+-- stractsim:stractsim
 
 DROP TABLE IF EXISTS Profile;
 CREATE TABLE Profile (
@@ -67,23 +67,23 @@ CREATE TABLE CountryImports (
 CREATE TABLE Company_Funds (
   Company int NOT NULL,
   Funds DECIMAL(10, 8),
-  LastUpdated TIMESTAMP
+  LastUpdated timestamp
 );
 
 CREATE TABLE Ports (
   Name varchar(100),
-  ID INTEGER,
+  ID int,
   Code varchar(20),
   Country varchar(100),
   Longitude DECIMAL(10, 8),
   Latitude DECIMAL(10, 8),
-  Timezone TIME
+  Timezone time
 );
 
 CREATE TABLE Risks (
-  ID INT AUTO_INCREMENT PRIMARY KEY,
-  Name VARCHAR(100) NOT NULL,
-  CreatedOn TIMESTAMP
+  ID bigserial PRIMARY KEY,
+  Name varchar(100) NOT NULL,
+  CreatedOn timestamp
 );
 
 INSERT INTO Risk VALUES(NULL, 'Pirates', CURRENT_TIMESTAMP);

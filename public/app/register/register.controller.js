@@ -25,7 +25,7 @@ class RegisterCtrl {
 
     var registractionData = { 'email': this.email, 'password': this.password };
     var newUser = this.stractAPIBuilder.getUserBuilder().withEmail(this.email).withPassword(this.password).build();
-    newUser.registerUser()
+    newUser.registerUser();
 
     /*
     this.$http({
