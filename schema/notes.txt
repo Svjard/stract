@@ -1,0 +1,85 @@
+Ports (done)
+Commodities (done)
+Countries (done)
+Tax Rates (done)
+Routes (First 25)
+Ships ( )
+Trade Import/Export ( )
+Trade Relations ( )
+Weather (done)
+
+6996567c60573d0d  --- weather underground API key
+
+Maximum Amount of Cargo Per TEU is 21,600Kg/47,600lbs/23.8tons
+
+Panama Canal
+  - 294.13m in length
+  - 32.31m in width
+  - 12.04m in draught
+
+
+Container Ships
+
+ealy containerships
+ - 1956+
+ - 500 - 800 TEU
+ - 137x17x9 (LDA - Beam - Draft)
+ - 4 containers high, 6 containers across
+
+ - 1956+
+ - 500 - 800 TEU
+ - 200x20x9
+ - 4 containers high, 8 containers across
+
+fully cellular
+ - 1970+
+ - 1000 - 2500 TEU
+ - 215x20x10 (LDA - Beam - Draft)
+ - 9 containers high (5 above, 4 below deck), 10 containers across
+
+Panamax
+ - 1980+
+ - 3000 - 3400 TEU
+ - 250x32x12.5 (LDA - Beam - Draft)
+ - 11 containers high (5 above, 6 below deck), 13 containers across
+
+Panamax Max
+ - 1985+
+ - 3400 - 4500 TEU
+ - 290x32x12.5 (LDA - Beam - Draft)
+ - 14 containers high (8 above, 6 below deck), 13 containers across
+
+Post Panamax
+ - 1988+
+ - 4000 - 5000 TEU
+ - 285x40x13 (LDA - Beam - Draft)
+ - 14 containers high (9 above, 5 below deck), 15 containers across
+
+Post Panamax Plus
+ - 2000+
+ - 6000 - 8000 TEU
+ - 300x43x14.5 (LDA - Beam - Draft)
+ - 15 containers high (9 above, 6 below deck), 17 containers across
+
+New Panamax
+ - 2014+
+ - 10000 - 12500 TEU
+ - 366x49x15.2 (LDA - Beam - Draft)
+ - 16 containers high (10 above, 6 below deck), 20 containers across
+
+Post New Panamax
+ - 2006+
+ - 13000 - 15000 TEU
+ - 397x56x15.5 (LDA - Beam - Draft)
+ - 18 containers high (10 above, 8 below deck), 23 containers across
+
+Triple E
+ - 2013+
+ - 16000 - 18000 TEU
+ - 400x59x15.5 (LDA/length - Beam - Draft)
+ - 18 containers high (10 above, 8 below deck), 23 containers across
+
+SuezMax (ULCS)
+ - 2010+
+ - 10000 - 12000 TEU
+ - 75.5x50x12.2 (LDA - Beam - Draft) 
